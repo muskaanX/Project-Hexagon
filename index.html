@@ -18,6 +18,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            opacity: 1;
             transition: opacity 1s ease-out;
         }
         .video-background {
@@ -50,24 +51,19 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Document loaded");
             const video = document.querySelector('video');
-            if (video) {
-                console.log("Video element found");
-                video.addEventListener('ended', function() {
-                    console.log("Video ended, starting fade-out");
-                    document.body.style.opacity = 0;
-                    setTimeout(function() {
-                        console.log("Redirecting to home.html");
-                        window.location.href = 'home.html';
-                    }, 1000);
-                });
-            } else {
-                console.error("Video element not found");
-            }
+            video.addEventListener('ended', function() {
+                console.log("Video ended, starting fade-out");
+                document.body.style.opacity = 0;
+                setTimeout(function() {
+                    console.log("Redirecting to home.html");
+                    window.location.href = 'home.html';
+                }, 1000);
+            });
         });
     </script>
 </head>
 <body>
-    <video autoplay muted loop class="video-background">
+    <video autoplay muted class="video-background">
         <source src="assets/rainbow.mp4" type="video/mp4">
     </video>
     <div class="container">
