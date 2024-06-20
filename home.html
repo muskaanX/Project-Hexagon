@@ -11,6 +11,13 @@
             margin: 0;
             padding: 0;
             display: flex;
+            opacity: 0;
+            animation: fadeIn 1s forwards; /* Smooth fade-in animation */
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         nav {
             width: 200px;
@@ -43,8 +50,8 @@
         }
         .title-box {
             width: 80%;
-            padding-top: 20px;
-            background: url('/assets/title-image.jpg') no-repeat center center;
+            height: 200px; /* Ensure the height is set */
+            background: url('assets/title-image.jpg') no-repeat center center; /* Ensure the path is correct */
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -59,7 +66,7 @@
             padding: 10px 20px;
             border-radius: 5px;
             text-transform: uppercase;
-            margin: 0; /* Remove margin */
+            margin: 0;
         }
         .content-section {
             width: 80%;
