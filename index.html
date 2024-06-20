@@ -48,11 +48,12 @@
     </style>
      <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log("Page loaded");
             const video = document.querySelector('video');
             video.addEventListener('ended', function() {
-                console.log("Video ended");
-                window.location.href = 'home.html';
+                document.body.style.opacity = 0; // Start fade-out transition
+                setTimeout(function() {
+                    window.location.href = 'home.html'; // Redirect after transition
+                }, 1000); // Match the transition duration
             });
         });
     </script>
