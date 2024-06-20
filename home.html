@@ -31,6 +31,15 @@
             align-items: center;
             justify-content: center;
         }
+
+        nav .nav-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        
         nav img {
             width: 100px; /* Adjust the size as needed */
             margin-bottom: 20px; /* Space between logo and links */
@@ -87,14 +96,16 @@
 <body>
     <nav>
         <img src="assets/ashoka logo.png" alt="Logo">
-        <center><a href="#section1">Home</a></center>
-        <center><a href="#section2">Timeline</a></center>
-        <center><a href="#section3">Features</a></center>
-        <center><a href="#section4">How It Works</a></center>
-        <center><a href="#section5">Do-It-Yourself</a></center>
-        <center><a href="#section6">Iterations</a></center>
-        <center><a href="#section7">Gallery</a></center>
-        <center><a href="#section8">License</a></center>
+        <div class="nav-content">
+            <a href="#section1">Home</a>
+            <a href="#section2">Timeline</a>
+            <a href="#section3">Features</a>
+            <a href="#section4">How It Works</a>
+            <a href="#section5">Do-It-Yourself</a>
+            <a href="#section6">Iterations</a>
+            <a href="#section7">Gallery</a>
+            <a href="#section8">License</a>
+        </div>
     </nav>
     <div class="content">
         <div class="title-box">
