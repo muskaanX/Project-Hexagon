@@ -50,14 +50,19 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Document loaded");
             const video = document.querySelector('video');
-            video.addEventListener('ended', function() {
-                console.log("Video ended, starting fade-out");
-                document.body.style.opacity = 0;
-                setTimeout(function() {
-                    console.log("Redirecting to home.html");
-                    window.location.href = 'home.html';
-                }, 1000);
-            });
+            if (video) {
+                console.log("Video element found");
+                video.addEventListener('ended', function() {
+                    console.log("Video ended, starting fade-out");
+                    document.body.style.opacity = 0;
+                    setTimeout(function() {
+                        console.log("Redirecting to home.html");
+                        window.location.href = 'home.html';
+                    }, 1000);
+                });
+            } else {
+                console.error("Video element not found");
+            }
         });
     </script>
 </head>
