@@ -46,6 +46,20 @@
             margin: 0;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Document loaded");
+            const video = document.querySelector('video');
+            video.addEventListener('ended', function() {
+                console.log("Video ended, starting fade-out");
+                document.body.style.opacity = 0;
+                setTimeout(function() {
+                    console.log("Redirecting to home.html");
+                    window.location.href = 'home.html';
+                }, 1000);
+            });
+        });
+    </script>
 </head>
 <body>
     <video autoplay muted loop class="video-background">
@@ -55,15 +69,4 @@
         <h1>PROJECT HEXAGON</h1>
     </div>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const video = document.querySelector('video');
-        video.addEventListener('ended', function() {
-            document.body.style.opacity = 0; // Start fade-out transition
-            setTimeout(function() {
-                window.location.href = 'home.html'; // Redirect after transition
-            }, 1000); // Match the transition duration
-        });
-    });
-</script>
 </html>
