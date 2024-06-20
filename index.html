@@ -29,8 +29,8 @@
             object-fit: cover;
         }
         .container {
-            background: rgba(0, 0, 0, 1); /* Opaque background */
-            padding: 40px; /* Equal padding on all sides */
+            background: rgba(0, 0, 0, 1);
+            padding: 20px;
             border-radius: 8px;
             text-align: center;
             display: inline-block;
@@ -38,18 +38,18 @@
         .container h1 {
             background: #000;
             color: #fff;
-            border: 2px solid #fff;
+            border: 10px solid #fff;
             padding: 10px 20px;
-            border-radius: 10px;
+            border-radius: 5px;
             text-transform: uppercase;
-            margin: 0; /* Remove margin */
+            margin: 0;
         }
     </style>
-    <script>
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('video');
             video.addEventListener('ended', function() {
-                window.location.href = 'home.html'; // Redirect to homepage after video ends
+                window.location.href = 'home.html';
             });
         });
     </script>
