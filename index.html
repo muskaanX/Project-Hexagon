@@ -47,9 +47,12 @@
     </style>
      <script>
         document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
+            console.log("Page loaded");
+            const video = document.querySelector('video');
+            video.addEventListener('ended', function() {
+                console.log("Video ended");
                 window.location.href = 'home.html';
-            }, 5000); // Redirect after 5 seconds
+            });
         });
     </script>
 </head>
