@@ -62,24 +62,21 @@
             padding: 10px 0;
             text-align: center;
         }
-        .content {
-            flex-grow: 1;
-            background: #222;
-            color: #fff;
+        .main-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            flex-grow: 1;
+            height: 100vh;
         }
         .title-box {
             width: 100%;
             height: 200px;
-            /*background: url('assets/title-image.jpg') no-repeat center center;*/
-            background: url('assets/title-image-extended.jpg') no-repeat center center;
+            background: url('assets/title-image.jpg') no-repeat center center;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            margin: 0;
             box-sizing: border-box;
         }
         .title-box h1 {
@@ -91,11 +88,30 @@
             text-transform: uppercase;
             margin: 0;
         }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .content-top {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
         .content-section {
-            width: 80%;
+            width: 49%;
             padding: 20px;
             background: #333;
-            border-radius: 0px;
+            border-radius: 8px;
+        }
+        .content-section.full-width {
+            width: 100%;
         }
     </style>
 </head>
@@ -116,24 +132,25 @@
             Ashoka University &copy; 2024
         </div>
     </nav>
-    <div class="content">
+    <div class="main-content">
         <div class="title-box">
             <h1>Project Hexagon</h1>
         </div>
-        <br>
-        <div class="content-section" id="section1">
-            <h2>Section 1</h2>
-            <p>Content for section 1.</p>
-        </div>
-        <br>
-        <div class="content-section" id="section2">
-            <h2>Section 2</h2>
-            <p>Content for section 2.</p>
-        </div>
-        <br>
-        <div class="content-section" id="section3">
-            <h2>Section 3</h2>
-            <p>Content for section 3.</p>
+        <div class="content">
+            <div class="content-top">
+                <div class="content-section">
+                    <h2>Section 1</h2>
+                    <p>Content for section 1.</p>
+                </div>
+                <div class="content-section">
+                    <h2>Section 2</h2>
+                    <p>Content for section 2.</p>
+                </div>
+            </div>
+            <div class="content-section full-width">
+                <h2>Section 3</h2>
+                <p>Content for section 3.</p>
+            </div>
         </div>
     </div>
 </body>
